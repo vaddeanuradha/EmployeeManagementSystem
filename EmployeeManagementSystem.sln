@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystem", "EmployeeManagementSystem\EmployeeManagementSystem.csproj", "{621BCFF7-4F02-47EA-BC82-3CAF40BF7597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementSystem", "EmployeeManagementSystem\EmployeeManagementSystem.csproj", "{621BCFF7-4F02-47EA-BC82-3CAF40BF7597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeUI", "EmployeeUI\EmployeeUI.csproj", "{95D47F8C-6449-4935-AF0B-D8410A7C6C6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{621BCFF7-4F02-47EA-BC82-3CAF40BF7597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{621BCFF7-4F02-47EA-BC82-3CAF40BF7597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{621BCFF7-4F02-47EA-BC82-3CAF40BF7597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D47F8C-6449-4935-AF0B-D8410A7C6C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D47F8C-6449-4935-AF0B-D8410A7C6C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D47F8C-6449-4935-AF0B-D8410A7C6C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D47F8C-6449-4935-AF0B-D8410A7C6C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,6 +17,7 @@ namespace EmployeeManagementSystem
                 Console.WriteLine("2.  UpadateEmployee");
                 Console.WriteLine("3.  DeleteEmploye");
                 Console.WriteLine("4.  Print all Employees");
+                Console.WriteLine("5.  Print all Transactions");
                 Console.WriteLine("Select an option");
                 var option = Console.ReadLine();
 
@@ -91,6 +92,18 @@ namespace EmployeeManagementSystem
                     case "4":
                         PrintAllEmployees();
                         break;
+                    case "5":
+                        PrintAllEmployees();
+                        Console.WriteLine("Enter Employee Id");
+                        var empId = Convert.ToInt32(Console.ReadLine());
+                        var transactions = EmployeeManager.GetAllTransactions(empId);
+                        foreach (var transaction in transactions)
+                        {
+                            Console.WriteLine($"TT: {transaction.TypeOfTransaction}, " +
+                                $"TD: {transaction.TransactionDate}  ");
+                        }
+                        break;
+
                     default:
                         break;
                 }

@@ -4,3 +4,6 @@
 
 /EmployeeManagementSystem/bin/Debug/netcoreapp2.1
 /EmployeeManagementSystem/obj
+/.vs
+/EmployeeUI/bin/Debug/netcoreapp2.1
+/EmployeeUI/obj

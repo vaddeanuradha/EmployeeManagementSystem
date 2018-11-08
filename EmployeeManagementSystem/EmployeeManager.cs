@@ -16,19 +16,20 @@ namespace EmployeeManagementSystem
             {
                 employee.SetWageRate(initialWageRate);
             }
+            Console.WriteLine("Adding employee");
+            db.Employees.Add(employee);
+            db.SaveChanges();
             var transaction = new Transaction
             {
                 TransactionDate = DateTime.Now,
                 TypeOfTransaction = TransactionType.Add,
                 Description = "Added Employee Details",
-
+                EmpId = employee.EmpId 
 
             };
             db.Transactions.Add(transaction);
             db.SaveChanges();
-            Console.WriteLine("Adding employee");
-            db.Employees.Add(employee);
-            db.SaveChanges();
+           
             return employee;
           }
         public static Employee UpdateEmployee(Employee employee)
@@ -41,7 +42,7 @@ namespace EmployeeManagementSystem
            
             foreach (var emp in db.Employees)
             {
-                {
+                
                     if (empId == emp.EmpId)
                     {
                         Console.WriteLine("Updating employee");
@@ -56,14 +57,14 @@ namespace EmployeeManagementSystem
 
                        
                     }
-                }
+                    
             }
             var transaction = new Transaction
             {
                 TransactionDate = DateTime.Now,
                 TypeOfTransaction = TransactionType.Update,
                 Description = "Updated Employee Details",
-
+                EmpId = empId
 
             };
             db.Transactions.Add(transaction);
@@ -78,7 +79,7 @@ namespace EmployeeManagementSystem
             return employee;
 
         }
-        public static void DeleteEmployee(Employee employee)
+        public static Employee DeleteEmployee(Employee employee)
         {
 
             Console.WriteLine("Which Employee do you want to Delete");
@@ -102,18 +103,24 @@ namespace EmployeeManagementSystem
                 TransactionDate = DateTime.Now,
                 TypeOfTransaction = TransactionType.Delete,
                 Description = "Deleted Employee Details",
-
+                EmpId = empId
 
             };
             db.Transactions.Add(transaction);
             db.SaveChanges();
 
             //db.SaveChanges();
-            
+            return employee;
         }
         public static IEnumerable<Employee> GetAllEmployees()
         {
             return db.Employees;
+        }
+        public static IEnumerable<Transaction>GetAllTransactions(int empId)
+
+        {
+            return db.Transactions.Where(t => t.EmpId == empId)
+                     .OrderByDescending(t => t.TransactionDate);
         }
 
     }

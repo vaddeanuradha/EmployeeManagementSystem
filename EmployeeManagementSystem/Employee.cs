@@ -34,6 +34,10 @@ namespace EmployeeManagementSystem
         public TypeOfDepartment Department { get; set; }
         public DateTime JoinDate { get;  }
         public TypeOfDesignation Designation { get; set; }
+
+
+        public virtual ICollection<Transaction> Transactions { get; set; }
+
         #endregion
         #region
         public Employee()
