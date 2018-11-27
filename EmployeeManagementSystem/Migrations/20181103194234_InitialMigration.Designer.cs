@@ -39,6 +39,7 @@ namespace EmployeeManagementSystem.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(50);
+                    b.Property<DateTime>("JoinDate");
 
                     b.Property<string>("EmpName")
                         .IsRequired()

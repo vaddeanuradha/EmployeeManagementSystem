@@ -2,10 +2,10 @@
 
 namespace EmployeeManagementSystem
 {
-    class EmployeeModel : DbContext
+     public class EmployeeModel : DbContext
     {
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public  DbSet<Employee> Employees { get; set; }
+        public  DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)

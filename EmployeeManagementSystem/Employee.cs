@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EmployeeManagementSystem
 {
-    enum TypeOfDepartment
+   public enum TypeOfDepartment
     {
         Finance,
         Sales,
@@ -12,7 +12,7 @@ namespace EmployeeManagementSystem
         IT
     }
    
-      enum TypeOfDesignation
+     public enum TypeOfDesignation
       {
         Manager,
         SrManager,
@@ -20,19 +20,19 @@ namespace EmployeeManagementSystem
         JrSysEngineer
 
       }
-    class Employee
+   public class Employee
     {
         
         #region
-        public int EmpId { get; private set; }
+        public int EmpId { get;  set; }
         public int SuperviserId { get; set; }
         public string EmpName { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public decimal WageRate { get; private set; }
+        public decimal WageRate { get;  set; }
         public int Contact { get; set; }
         public TypeOfDepartment Department { get; set; }
-        public DateTime JoinDate { get;  }
+        public DateTime JoinDate { get; set; }
         public TypeOfDesignation Designation { get; set; }
 
 

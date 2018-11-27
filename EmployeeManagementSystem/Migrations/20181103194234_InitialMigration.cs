@@ -21,6 +21,7 @@ namespace EmployeeManagementSystem.Migrations
                     WageRate = table.Column<decimal>(nullable: false),
                     Contact = table.Column<int>(maxLength: 50, nullable: false),
                     Department = table.Column<int>(nullable: false),
+                    JoinDate = table.Column<DateTime>(nullable: false),
                     Designation = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

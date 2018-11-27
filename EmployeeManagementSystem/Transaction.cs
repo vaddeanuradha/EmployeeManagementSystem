@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeManagementSystem
 {
-    enum TransactionType
-    {
+   public enum TransactionType
+   {
         Add,
         Update,
         Delete
-    }
-    class Transaction
-    {
+   }
+   public class Transaction
+   {
         public int TransactionId { get; set; }
         public DateTime TransactionDate { get; set; }
 
@@ -21,5 +21,5 @@ namespace EmployeeManagementSystem
 
         public virtual Employee Employee { get; set; }
 
-    }
+   }
 }

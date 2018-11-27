@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using EmployeeUI.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using EmployeeManagementSystem;
 
 namespace EmployeeUI
 {
@@ -39,7 +40,7 @@ namespace EmployeeUI
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
+                        
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
