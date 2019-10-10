@@ -13,9 +13,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="SuperviserId" class="control-label"></label>
-                <input asp-for="SuperviserId" class="form-control" />
-                <span asp-validation-for="SuperviserId" class="text-danger"></span>
+                <label asp-for="EManagerId" class="control-label"></label>
+                <input asp-for="EManagerId" class="form-control" />
+                <span asp-validation-for="EManagerId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EmpName" class="control-label"></label>
@@ -52,6 +52,11 @@
                 <select asp-for="Designation" asp-items="@Html.GetEnumSelectList<TypeOfDesignation>()" class="form-control"></select>
                 <span asp-validation-for="Designation" class="text-danger"></span>
             </div>
+            @*<div class="form-group">
+                <label asp-for="EmployeeRole.Role.RoleName" class="control-label"></label>
+                <input asp-for="EmployeeRole.Role.RoleName" class="form-control" />
+                <span asp-validation-for="EmployeeRole.Role.RoleName" class="text-danger"></span>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>

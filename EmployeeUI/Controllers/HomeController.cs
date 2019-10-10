@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EmployeeUI.Models;
+using EmployeeManagementSystem;
 
 namespace EmployeeUI.Controllers
 {
@@ -12,6 +13,8 @@ namespace EmployeeUI.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["IsAdmin"] = HttpContext.User.Identity.Name == "jhon@gmail.com";
+            ViewData["IsStandardUser"] = !string.IsNullOrEmpty(HttpContext.User.Identity.Name);
             return View();
         }
 

@@ -7,3 +7,11 @@
 /.vs
 /EmployeeUI/bin/Debug/netcoreapp2.1
 /EmployeeUI/obj
+/ClassLibrary1/obj/Debug
+/ConsoleApp1/obj
+/EmployeeManagementSystem/bin/Release/netcoreapp2.1
+/EmployeeManagementSystemDbContext/bin/Debug/netcoreapp2.1
+/EmployeeManagementSystemDbContext/obj
+/EmployeeManagementUI/bin/Debug/netcoreapp2.1
+/EmployeeManagementUI/obj
+/EmployeeUI/bin/Release/netcoreapp2.1

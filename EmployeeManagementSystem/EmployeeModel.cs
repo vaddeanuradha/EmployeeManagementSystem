@@ -2,15 +2,17 @@
 
 namespace EmployeeManagementSystem
 {
-     public class EmployeeModel : DbContext
+    public class EmployeeModel : DbContext
     {
-        public  DbSet<Employee> Employees { get; set; }
-        public  DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+       
 
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EmployeeManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        
         }
         protected override void OnModelCreating(
             ModelBuilder modelBuilder)
@@ -31,7 +33,7 @@ namespace EmployeeManagementSystem
                       .IsRequired()
                       .HasMaxLength(50);
 
-                entity.Property(e => e.SuperviserId)
+                entity.Property(e => e.EManagerId)
                       .IsRequired()
                       .HasMaxLength(50);
 
@@ -59,6 +61,9 @@ namespace EmployeeManagementSystem
 
 
             });
+             
+           
         }
     }
 }
+

@@ -21,5 +21,5 @@ namespace EmployeeManagementSystem
 
         public virtual Employee Employee { get; set; }
 
-   }
+    }
 }

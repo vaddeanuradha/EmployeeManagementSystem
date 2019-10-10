@@ -2,19 +2,24 @@
 using Microsoft.EntityFrameworkCore;
 using EmployeeManagementSystem;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace EmployeeUI.Controllers
 {
     [Authorize]
-    public class EmployeesController : Controller
+    public class EmployeesController : BaseController
     {
        
-
-       
+        
         // GET: Employees
         public IActionResult Index()
         {
+          
             return View(EmployeeManager.GetAllEmployees(HttpContext.User.Identity.Name));
+            
+             //List userRolePermissions = GetUserRolePermissions(emailId);
+            //get roles for this email id
+            //if role has permissions then show
         }
 
         // GET: Employees/Details/5
